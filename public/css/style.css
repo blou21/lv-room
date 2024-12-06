@@ -1,0 +1,177 @@
+.bg-yellow {
+  background-color: #eab308 !important;
+}
+
+.bg-pink {
+  background-color: #e22b59 !important;
+}
+
+.text-pink {
+  color: #e22b59 !important;
+}
+
+.text-yellow {
+  color: #eab308 !important;
+}
+
+.btn-yellow {
+  background-color: #eab308 !important;
+  color: #fff;
+}
+
+.btn-yellow:hover {
+  background-color: #aa8000 !important;
+  color: #fff;
+}
+
+.first {
+  text-align: center;
+  margin-top: 5rem;
+  padding: 0.3rem 1rem;
+}
+
+.p-x-50 {
+  padding: 0.4rem 5rem;
+  font-weight: bold;
+}
+
+.second {
+  margin-top: 5rem;
+  border: 1px solid #e2e8f0;
+  padding: 20px 5px;
+  width: 100%;
+}
+
+.notification {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  background-color: #f1f5f9;
+  padding: 10px 5px;
+}
+
+.notification .left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.carausel-container {
+  width: 100%; /* Atur sesuai kebutuhan */
+  height: 400px; /* Atur sesuai kebutuhan */
+  overflow: hidden;
+  position: relative;
+}
+
+.carausel-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carausel-inner {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+.carausel-item {
+  width: 100%;
+  height: auto; /* Atur sesuai kebutuhan */
+  background-color: #ccc; /* Warna latar belakang item */
+  margin-bottom: 10px; /* Jarak antara item */
+}
+
+.loading {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.loader {
+  border: 4px solid #f8f1f1; /* Warna dasar latar belakang */
+  border-top: 4px solid blue; /* Warna biru pada bagian atas lingkaran */
+  border-radius: 50%;
+  width: 40px; /* Diameter lingkaran */
+  height: 40px; /* Diameter lingkaran */
+  animation: spin 1s linear infinite;
+  position: fixed; /* Memposisikan loader */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image-bottom {
+  margin-top: 5rem;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+}
+
+.box input {
+  padding-right: 40px;
+}
+
+span.show-password {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #007bff, #00c851);
+  border: none;
+  color: white;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #00c851, #007bff);
+}
+
+.btn-gradient-3 {
+  background: linear-gradient(45deg, #f5b67d, #c151c0, #5856cd);
+  border: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient-3:hover {
+  background: linear-gradient(45deg, #5856cd, #c151c0, #f5b67d);
+}
+
+.video-header {
+  width: 100%;
+  height: auto;
+}
+
+.video-header .video-js {
+  width: 100%;
+}
+
+.image-password {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}

