@@ -70,7 +70,7 @@
                                                 <div role="presentation" class="bubble menu-container custom-scroll top left opacity-transition fast open shown" style="transform-origin: left top;">
                                                   
                                                 <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
-    <span class="country-flag"><img src="../assets/img/uae.png" class="emoji" alt="🇦🇪" data-path="./lib/img-apple-160/1f1e6-1f1ea.png"></span>
+    <span class="country-flag"><img src="../assets/img/arab.png" class="emoji" alt="🇦🇪" data-path="./lib/img-apple-160/1f1e6-1f1ea.png"></span>
     <span class="country-name">United Arab Emirates</span>
     <span class="country-code">+971</span>
 </div>
