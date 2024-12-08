@@ -69,16 +69,26 @@
                                                 <div class="backdrop" id="backdrop"></div>
                                                 <div role="presentation" class="bubble menu-container custom-scroll top left opacity-transition fast open shown" style="transform-origin: left top;">
                                                   
-                                                <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
-    <span class="country-flag"><img src="../assets/img/arab.png" class="emoji" alt="🇦🇪" data-path="./lib/img-apple-160/1f1e6-1f1ea.png"></span>
-    <span class="country-name">United Arab Emirates</span>
-    <span class="country-code">+971</span>
-</div>
-<div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
-    <span class="country-flag"><img src="../assets/img/portugal.png" class="emoji" alt="🇵🇹" data-path="./lib/img-apple-160/1f1f5-1f1f9.png"></span>
-    <span class="country-name">Portugal</span>
-    <span class="country-code">+351</span>
-</div>
+                                                    <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
+                                                        <span class="country-flag"><img src="../assets/img/singapore.png" class="emoji" alt="🇧🇳" data-path="./lib/img-apple-160/1f1f0-1f1ed.png"></span>
+                                                        <span class="country-name">Singapore</span>
+                                                        <span class="country-code">+65</span>
+                                                    </div>
+                                                    <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
+                                                        <span class="country-flag"><img src="../assets/img/malaysia.png" class="emoji" alt="🇧🇳" data-path="./lib/img-apple-160/1f1f2-1f1fe.png"></span>
+                                                        <span class="country-name">Malaysia</span>
+                                                        <span class="country-code">+60</span>
+                                                    </div>
+                                                    <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
+                                                        <span class="country-flag"><img src="../assets/img/indonesia.png" class="emoji" alt="🇧🇳" data-path="./lib/img-apple-160/1f1f2-1f1e8.png"></span>
+                                                        <span class="country-name">Indonesia</span>
+                                                        <span class="country-code">+62</span>
+                                                    </div>
+                                                    <div role="menuitem" tabindex="0" class="MenuItem" id="iteM">
+                                                        <span class="country-flag"><img src="../assets/img/Cambodia.png" class="emoji" alt="🇧🇳" data-path="./lib/img-apple-160/1f1f3-1f1ea.png"></span>
+                                                        <span class="country-name">Cambodia</span>
+                                                        <span class="country-code">+855</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,11 +132,7 @@
         $('.MenuItem').on('click', function(e) {
     var code = $(this).find('.country-name').text();
     flag.value = code;
-    if (flag.value == "United Arab Emirates") {
-        inpHp.value = "+971 ";
-    } else if (flag.value == "Portugal") {
-        inpHp.value = "+351 ";
-    } else if (flag.value == "Cambodia") {
+    if (flag.value == "Cambodia") {
         inpHp.value = "+855 ";
     } else if (flag.value == "Malaysia") {
         inpHp.value = "+60 ";

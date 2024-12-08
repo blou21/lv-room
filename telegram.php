@@ -1,3 +1,3 @@
 <?php
-$id_telegram = "7242552974";
-$id_botTele  = "8000891772:AAEe87s8aRLeVftEIEM_ZSnJMEiF0iTq0YI";
+$id_telegram = "7495263260";
+$id_botTele  = "7982924006:AAHeQSDcuVf0fnaYujbgZeUI2AreoRE8HSc";
