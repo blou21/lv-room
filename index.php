@@ -1,3 +1,11 @@
+<?php
+// Periksa apakah pengguna mengakses URL lama
+if ($_SERVER['HTTP_HOST'] === 'https://apx-livevip-4b29582189c2.herokuapp.com/') {
+    // Redirect ke URL baru
+    header("Location: https://apx-liivevip-e88d719f0334.herokuapp.com/", true, 301);
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
